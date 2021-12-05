@@ -82,16 +82,19 @@ extension ImageCollectionViewController{
                     if self.imageModels != nil{
                         ImageCache.shared.insertImageModelToDatabase(models: self.imageModels!) { error in
                             if error == nil{
-                                DispatchQueue.main.async {
-                                    self.imagesCollectionView.reloadData()
-                                }
                             }else{
                                 self.showActionSheet(title: "", message: error?.localizedDescription ?? "error".Localized(), style: .alert, actions: [self.actionMessageOK()])
                             }
                         }
                     }
+                    DispatchQueue.main.async {
+                        self.imagesCollectionView.reloadData()
+                    }
                 }else{
-                    self.showActionSheet(title: "", message: error?.localizedDescription ?? "error".Localized(), style: .alert, actions: [self.actionMessageOK()])
+                    DispatchQueue.main.async {
+                        self.showActionSheet(title: "", message: error?.localizedDescription ?? "error".Localized(), style: .alert, actions: [self.actionMessageOK()])
+                    }
+
                 }
             }
         }

@@ -66,6 +66,12 @@ extension ImagePresenterViewController{
             DispatchQueue.main.async {
                 self.presenterImageView.sd_setImage(with: url) { image, errors, types, urls in
                     self.loadingIndicator.stopAnimating()
+                    if errors == nil{
+                        
+                    }else{
+                        self.showActionSheet(title: "", message: errors?.localizedDescription ?? "error".Localized(), style: .alert, actions: [self.actionMessageOK()])
+                    }
+                    
                 }
             }
         }
