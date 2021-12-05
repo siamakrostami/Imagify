@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  SRImagify
+
+  Created by Siamak Rostami on 12/5/21.
+  
+*/
+"error" = "Unknown error happened, Please try again!";
+"no-cache" = "Your cache is empty, Nothing to clear.";
+"clear-cache" = "Do you want to clear all cache data and fetch them from remote again?";

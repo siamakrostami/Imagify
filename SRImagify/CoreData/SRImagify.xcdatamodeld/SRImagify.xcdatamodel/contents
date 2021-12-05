@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ImageEntity" representedClassName=".ImageEntity" syncable="YES">
+        <attribute name="content_type" optional="YES" attributeType="String"/>
+        <attribute name="created_at" optional="YES" attributeType="String"/>
+        <attribute name="download_url" optional="YES" attributeType="String"/>
+        <attribute name="filename" optional="YES" attributeType="String"/>
+        <attribute name="guessed_taken_at" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="md5sum" optional="YES" attributeType="String"/>
+        <attribute name="media_type" optional="YES" attributeType="String"/>
+        <attribute name="size" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="taken_at" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail_url" optional="YES" attributeType="String"/>
+        <attribute name="user_id" optional="YES" attributeType="String"/>
+        <attribute name="video" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="ImageEntity" positionX="-63" positionY="-18" width="128" height="224"/>
+    </elements>
+</model>

@@ -1,0 +1,34 @@
+.DS_Store
+.idea/
+.idea*
+SRImagify.xcworkspace/xcuserdata/*
+SRImagify.xcodeproj/xcuserdata/*
+## User settings
+xcuserdata/
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+
+# OSX Temp
+.DS_Store
+.AppleDouble
+.LSOverride
+
+.DS_Store
+.idea
+*.lock
+*.swp
+Pods/
