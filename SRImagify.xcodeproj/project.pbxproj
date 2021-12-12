@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		0141B31D275B4C4E00D686CF /* SRImagify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0141B31B275B4C4E00D686CF /* SRImagify.xcdatamodeld */; };
 		0141B323275B4F0500D686CF /* ImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0141B322275B4F0500D686CF /* ImageEntity.swift */; };
-		0141B325275B7EB700D686CF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0141B324275B7EB700D686CF /* ImageCache.swift */; };
 		0176B81C275C97F300CCCA20 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176B81B275C97F300CCCA20 /* URL.swift */; };
 		0176B81E275C980200CCCA20 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176B81D275C980200CCCA20 /* UIViewController.swift */; };
 		0176B820275C980E00CCCA20 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176B81F275C980E00CCCA20 /* String.swift */; };
 		0176B823275C98AF00CCCA20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0176B825275C98AF00CCCA20 /* Localizable.strings */; };
 		0176B828275CA17F00CCCA20 /* ImagePresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176B827275CA17F00CCCA20 /* ImagePresenterViewController.swift */; };
+		018C9C772765E5A800C306FC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018C9C762765E5A800C306FC /* CoreDataStack.swift */; };
 		01C49CC4275A5BA100E772AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49CC3275A5BA100E772AC /* AppDelegate.swift */; };
 		01C49CC6275A5BA100E772AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49CC5275A5BA100E772AC /* SceneDelegate.swift */; };
 		01C49CCB275A5BA100E772AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C49CC9275A5BA100E772AC /* Main.storyboard */; };
@@ -23,10 +23,8 @@
 		01C49CE1275A5C3900E772AC /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49CE0275A5C3900E772AC /* ImageCollectionViewController.swift */; };
 		01C49CE5275A5E9100E772AC /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49CE3275A5E9100E772AC /* ImageCollectionViewCell.swift */; };
 		01C49CE6275A5E9100E772AC /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01C49CE4275A5E9100E772AC /* ImageCollectionViewCell.xib */; };
-		01C49CE8275A63E000E772AC /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49CE7275A63E000E772AC /* ImageModel.swift */; };
 		01C49CEA275A661400E772AC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49CE9275A661400E772AC /* NetworkConstants.swift */; };
 		01C49CEC275A688200E772AC /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49CEB275A688200E772AC /* APIHandler.swift */; };
-		01C49CEE275A6E7300E772AC /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49CED275A6E7300E772AC /* ImageHandler.swift */; };
 		01C49CF0275A728600E772AC /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49CEF275A728600E772AC /* Units.swift */; };
 		A83261F66CD17A6E3DD8940F /* Pods_SRImagify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E73405DD4D5151D0FB8072 /* Pods_SRImagify.framework */; };
 /* End PBXBuildFile section */
@@ -34,12 +32,12 @@
 /* Begin PBXFileReference section */
 		0141B31C275B4C4E00D686CF /* SRImagify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SRImagify.xcdatamodel; sourceTree = "<group>"; };
 		0141B322275B4F0500D686CF /* ImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEntity.swift; sourceTree = "<group>"; };
-		0141B324275B7EB700D686CF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		0176B81B275C97F300CCCA20 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		0176B81D275C980200CCCA20 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		0176B81F275C980E00CCCA20 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		0176B824275C98AF00CCCA20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0176B827275CA17F00CCCA20 /* ImagePresenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresenterViewController.swift; sourceTree = "<group>"; };
+		018C9C762765E5A800C306FC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		01C49CC0275A5BA100E772AC /* SRImagify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRImagify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C49CC3275A5BA100E772AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01C49CC5275A5BA100E772AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,10 +48,8 @@
 		01C49CE0275A5C3900E772AC /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
 		01C49CE3275A5E9100E772AC /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		01C49CE4275A5E9100E772AC /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
-		01C49CE7275A63E000E772AC /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		01C49CE9275A661400E772AC /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		01C49CEB275A688200E772AC /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
-		01C49CED275A6E7300E772AC /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
 		01C49CEF275A728600E772AC /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		37391213D5FAF116F8D669AD /* Pods-SRImagify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRImagify.debug.xcconfig"; path = "Target Support Files/Pods-SRImagify/Pods-SRImagify.debug.xcconfig"; sourceTree = "<group>"; };
 		4422EC4B6B7F64AC5A42A74A /* Pods-SRImagify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRImagify.release.xcconfig"; path = "Target Support Files/Pods-SRImagify/Pods-SRImagify.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +73,7 @@
 			children = (
 				0141B31B275B4C4E00D686CF /* SRImagify.xcdatamodeld */,
 				0141B322275B4F0500D686CF /* ImageEntity.swift */,
-				0141B324275B7EB700D686CF /* ImageCache.swift */,
+				018C9C762765E5A800C306FC /* CoreDataStack.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -175,35 +171,17 @@
 			isa = PBXGroup;
 			children = (
 				01C49CE2275A5E7700E772AC /* XIB */,
-				01C49CDF275A5C1600E772AC /* ViewControllers */,
-				01C49CDE275A5C1000E772AC /* Model */,
-				01C49CDD275A5C0900E772AC /* ViewModel */,
+				01C49CDF275A5C1600E772AC /* ViewController */,
 			);
 			path = ImageList;
 			sourceTree = "<group>";
 		};
-		01C49CDD275A5C0900E772AC /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				01C49CED275A6E7300E772AC /* ImageHandler.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		01C49CDE275A5C1000E772AC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				01C49CE7275A63E000E772AC /* ImageModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		01C49CDF275A5C1600E772AC /* ViewControllers */ = {
+		01C49CDF275A5C1600E772AC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				01C49CE0275A5C3900E772AC /* ImageCollectionViewController.swift */,
 			);
-			path = ViewControllers;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		01C49CE2275A5E7700E772AC /* XIB */ = {
@@ -354,13 +332,11 @@
 				01C49CEA275A661400E772AC /* NetworkConstants.swift in Sources */,
 				0176B828275CA17F00CCCA20 /* ImagePresenterViewController.swift in Sources */,
 				01C49CE1275A5C3900E772AC /* ImageCollectionViewController.swift in Sources */,
-				01C49CE8275A63E000E772AC /* ImageModel.swift in Sources */,
 				01C49CC4275A5BA100E772AC /* AppDelegate.swift in Sources */,
 				0176B81C275C97F300CCCA20 /* URL.swift in Sources */,
 				01C49CE5275A5E9100E772AC /* ImageCollectionViewCell.swift in Sources */,
-				0141B325275B7EB700D686CF /* ImageCache.swift in Sources */,
-				01C49CEE275A6E7300E772AC /* ImageHandler.swift in Sources */,
 				0141B31D275B4C4E00D686CF /* SRImagify.xcdatamodeld in Sources */,
+				018C9C772765E5A800C306FC /* CoreDataStack.swift in Sources */,
 				01C49CF0275A728600E772AC /* Units.swift in Sources */,
 				0176B820275C980E00CCCA20 /* String.swift in Sources */,
 				01C49CC6275A5BA100E772AC /* SceneDelegate.swift in Sources */,

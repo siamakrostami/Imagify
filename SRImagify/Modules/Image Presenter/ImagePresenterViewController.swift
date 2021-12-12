@@ -9,49 +9,37 @@ import UIKit
 import SDWebImage
 
 class ImagePresenterViewController: UIViewController {
-    
-    @IBOutlet weak var imageScrollView: UIScrollView!{
-        didSet{
-            imageScrollView.delegate = self
-            imageScrollView.minimumZoomScale = 0.5
-            imageScrollView.maximumZoomScale = 6
-            imageScrollView.alwaysBounceVertical = false
-            imageScrollView.alwaysBounceHorizontal = false
-            imageScrollView.showsVerticalScrollIndicator = false
-            imageScrollView.flashScrollIndicators()
-        }
-    }
+    //MARK: - Outlets & Variables
     @IBOutlet weak var presenterImageView: UIImageView!
     @IBOutlet weak var dateView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     
-    var imageModel : ImageModel!
+    var imageModel : ImageEntity!
     let loadingIndicator = UIActivityIndicatorView()
     
+    //MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         self.initLoadingIndicator()
         self.setDate()
         self.initImageView()
-
         // Do any additional setup after loading the view.
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.dateView.layer.cornerRadius = self.dateView.frame.height / 2
     }
-    
-
 }
 
+//MARK: - Functions
 extension ImagePresenterViewController{
-    
+    //MARK: - Initialize Loading Indicator
     fileprivate func initLoadingIndicator(){
-        imageScrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
-        self.loadingIndicator.center = self.presenterImageView.center
-        self.presenterImageView.addSubview(loadingIndicator)
+        self.loadingIndicator.center = self.view.center
+        self.view.addSubview(loadingIndicator)
     }
-    
+    //MARK: - Download Or Set Image To Image View
     fileprivate func initImageView(){
         self.loadingIndicator.startAnimating()
         guard let completeSize = self.imageModel.download_url else {return}
@@ -63,30 +51,20 @@ extension ImagePresenterViewController{
                 self.presenterImageView.image = cached
             }
         }else{
-            DispatchQueue.main.async {
-                self.presenterImageView.sd_setImage(with: url) { image, errors, types, urls in
-                    self.loadingIndicator.stopAnimating()
-                    if errors == nil{
-                        
-                    }else{
-                        self.showActionSheet(title: "", message: errors?.localizedDescription ?? "error".Localized(), style: .alert, actions: [self.actionMessageOK()])
-                    }
-                    
+            self.presenterImageView.sd_setImage(with: url) { [weak self]image, error, cache, url in
+                self?.loadingIndicator.stopAnimating()
+                if error == nil{
+                    debugPrint("Image Downloaded and Cached Successfuly")
+                }else{
+                    self?.showActionSheet(title: "", message: error?.localizedDescription ?? "error".Localized(), style: .alert, actions: [self?.actionMessageOK()])
                 }
             }
         }
-
     }
-    
+    //MARK: - Set Image Date
     fileprivate func setDate(){
         DispatchQueue.main.async {
             self.dateLabel.text = self.imageModel.created_at
         }
-    }
-}
-
-extension ImagePresenterViewController : UIScrollViewDelegate{
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return presenterImageView
     }
 }

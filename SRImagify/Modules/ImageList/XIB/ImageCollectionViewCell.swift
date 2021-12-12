@@ -24,7 +24,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
     //MARK: - Set Cell Data
     /// this function check the cache status of an image
-    func setImageData(model : ImageModel){
+    func setImageData(model : ImageEntity){
         if let name = model.thumbnail_url{
             let url = URL(string: name)
             let width = String(Int(floor(ImageCollectionViewController.optimizedWidth)))
@@ -45,8 +45,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
                 }
             }
         }
-        if let size = model.size{
-            self.fileSizeLabel.text = "\(Units(bytes: size).megabytes.rounded()) mb"
+        if model.size > 0{
+            self.fileSizeLabel.text = "\(Units(bytes: model.size).megabytes.rounded()) mb"
         }else{
             self.containerView.isHidden = true
         }

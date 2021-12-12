@@ -13,7 +13,7 @@ enum CustomError : Error{
 }
 //MARK: - Class Protocols
 protocol APIHandlerProtocols {
-    func request<T:Codable>(url : URL?, expecting : T.Type , completion: @escaping ((Result<T,Error>) -> Void))
+    func request(url : URL?,completion: @escaping ((Result<[Dictionary<String,Any>]?,Error>) -> Void))
 }
 //MARK: - Class Definition
 class APIHandler : URLSession {
@@ -21,7 +21,7 @@ class APIHandler : URLSession {
 //MARK: - Class Extension (URLSession Class)
 extension URLSession : APIHandlerProtocols{
     //MARK: - Generic Function to fetch data from api
-    func request<T>(url: URL?, expecting: T.Type, completion: @escaping ((Result<T, Error>) -> Void)) where T : Decodable, T : Encodable {
+    func request(url: URL?,completion: @escaping ((Result<[Dictionary<String,Any>]?,Error>) -> Void)){
         guard let url = url else {
             completion(.failure(CustomError.invalidURL))
             return
@@ -36,9 +36,8 @@ extension URLSession : APIHandlerProtocols{
                 return
             }
             do{
-                let results = try JSONDecoder().decode(expecting, from: data)
-                completion(.success(results))
-                
+                let jsonData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [Dictionary<String,Any>]
+                completion(.success(jsonData))
             }catch{
                 completion(.failure(error))
             }

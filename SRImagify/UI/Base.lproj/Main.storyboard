@@ -54,25 +54,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8Y-uG-54L">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aBA-yU-6TF">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="aBA-yU-6TF" firstAttribute="leading" secondItem="O8Y-uG-54L" secondAttribute="leading" id="21M-7R-kWO"/>
-                                    <constraint firstItem="aBA-yU-6TF" firstAttribute="top" secondItem="O8Y-uG-54L" secondAttribute="top" id="7GJ-qB-gAa"/>
-                                    <constraint firstItem="aBA-yU-6TF" firstAttribute="centerX" secondItem="O8Y-uG-54L" secondAttribute="centerX" id="Ud2-a3-lAX"/>
-                                    <constraint firstAttribute="bottom" secondItem="aBA-yU-6TF" secondAttribute="bottom" id="Vhw-fB-g3o"/>
-                                    <constraint firstAttribute="trailing" secondItem="aBA-yU-6TF" secondAttribute="trailing" id="WRz-TV-ajF"/>
-                                    <constraint firstItem="aBA-yU-6TF" firstAttribute="centerY" secondItem="O8Y-uG-54L" secondAttribute="centerY" id="cez-vU-Th8"/>
-                                    <constraint firstItem="aBA-yU-6TF" firstAttribute="height" secondItem="O8Y-uG-54L" secondAttribute="height" id="edw-lb-MRt"/>
-                                    <constraint firstItem="aBA-yU-6TF" firstAttribute="width" secondItem="O8Y-uG-54L" secondAttribute="width" id="gZ3-X6-MsM"/>
-                                </constraints>
-                            </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aBA-yU-6TF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="744"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVW-RW-fOt">
                                 <rect key="frame" x="20.5" y="804" width="373" height="50"/>
                                 <subviews>
@@ -97,18 +82,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xy6-nI-I06" firstAttribute="bottom" secondItem="FVW-RW-fOt" secondAttribute="bottom" constant="8" id="3yV-JP-M1Y"/>
-                            <constraint firstItem="O8Y-uG-54L" firstAttribute="top" secondItem="rAY-9t-PAY" secondAttribute="top" id="FCc-9y-X9C"/>
-                            <constraint firstItem="xy6-nI-I06" firstAttribute="trailing" secondItem="O8Y-uG-54L" secondAttribute="trailing" id="Mz2-W8-7VO"/>
-                            <constraint firstItem="O8Y-uG-54L" firstAttribute="leading" secondItem="xy6-nI-I06" secondAttribute="leading" id="hFy-96-GH5"/>
-                            <constraint firstAttribute="bottom" secondItem="O8Y-uG-54L" secondAttribute="bottom" id="hqt-YA-25k"/>
+                            <constraint firstItem="xy6-nI-I06" firstAttribute="trailing" secondItem="aBA-yU-6TF" secondAttribute="trailing" id="Hyi-r6-aet"/>
+                            <constraint firstItem="xy6-nI-I06" firstAttribute="top" secondItem="aBA-yU-6TF" secondAttribute="top" id="Ua5-pU-dD0"/>
                             <constraint firstItem="FVW-RW-fOt" firstAttribute="centerX" secondItem="xy6-nI-I06" secondAttribute="centerX" id="pCM-lf-yC9"/>
                             <constraint firstItem="FVW-RW-fOt" firstAttribute="width" secondItem="rAY-9t-PAY" secondAttribute="width" multiplier="0.9" id="pXD-IA-hHR"/>
+                            <constraint firstItem="aBA-yU-6TF" firstAttribute="leading" secondItem="xy6-nI-I06" secondAttribute="leading" id="vdV-f1-A0D"/>
+                            <constraint firstItem="aBA-yU-6TF" firstAttribute="bottom" secondItem="FVW-RW-fOt" secondAttribute="top" constant="-16" id="wwL-wX-EiL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="1wn-iA-ofD" id="sNW-IM-OPa"/>
                         <outlet property="dateView" destination="FVW-RW-fOt" id="reW-Il-zXT"/>
-                        <outlet property="imageScrollView" destination="O8Y-uG-54L" id="lSb-mq-CKA"/>
                         <outlet property="presenterImageView" destination="aBA-yU-6TF" id="ose-CR-3DT"/>
                     </connections>
                 </viewController>
